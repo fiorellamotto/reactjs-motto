@@ -1,0 +1,35 @@
+.container {
+    width: 60%;
+    background-color: rgba(36, 56, 170, 0.952);
+    box-shadow: 3px 3px 20px rgb(75, 75, 75);
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    margin-top: 50px;
+    border-radius: 40px;
+}
+
+.detalle {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    display: flex;
+}
+
+.container img {
+    width: 30%;
+    border-radius: 16px;
+    margin-left: 20px;
+    height: 80%;
+}
+
+.detalleProducto {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 30px;
+}

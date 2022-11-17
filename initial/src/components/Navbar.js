@@ -1,53 +1,43 @@
 import { Component } from "react";
 import CartWidget from "./CartWidget";
+import { NavLink } from "react-router-dom";
 import "./NavbarStyle.css";
 
-const MenuData = [
-    {
-        title: "Inicio",
-        url: "#",
-        name: "nav-links",
-        icon: ""
-    },
-    {
-        title: "Productos",
-        url: "#",
-        name: "nav-links",
-        icon: ""
-    },
-    {
-        title: "Sobre Nosotros",
-        url: "#",
-        name: "nav-links",
-        icon: ""
-    },
-    {
-        title: "Contacto",
-        url: "#",
-        name: "nav-links",
-        icon: ""
-    }
-]
-
-
-class Navbar extends Component {
-    render() {
-        return (
-            <nav className="NavbarItems">
-                <ul className="nav-menu">
-                    {MenuData.map((item, index) => {
-                        return (
-                            <li key={index}>
-                                <a href={item.url} className={item.name}><i className={item.icon}></i>{item.title}</a>
-                            </li>
-                        )
-                    })}
-         
-                </ul>
-                <h1 className="logo"><CartWidget /></h1>
-            </nav>
-        );
-    }
-}
-
+export const Navbar = () => {
+    return (
+      <nav className="NavbarItems">
+        <div className="brand"></div>
+        <ul className="nav-menu">
+          <li>
+            {" "}
+            <NavLink className="nav-links" to="/">
+              Home
+            </NavLink>{" "}
+          </li>
+          <li>
+            {" "}
+            <NavLink className="nav-links" to="/categoria/monitores">
+              Monitores
+            </NavLink>{" "}
+          </li>
+          <li>
+            {" "}
+            <NavLink className="nav-links" to="/categoria/notebooks">
+              Notebooks
+            </NavLink>{" "}
+          </li>
+          <li>
+            {" "}
+            <NavLink className="nav-links" to="/all">
+              Todos los productos
+            </NavLink>{" "}
+          </li>
+        </ul>
+        <div>
+          <CartWidget />
+        </div>
+      </nav>
+    );
+  };
+  
 export default Navbar
